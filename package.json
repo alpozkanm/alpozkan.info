@@ -1,5 +1,5 @@
 {
-  "name": "www.alpozkan.info",
+  "name": "jpreagan.com",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -11,8 +11,8 @@
     "check-format": "prettier --check --ignore-unknown .",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "test:e2e": "start-server-and-test dev http://localhost:3000 cypress:open",
-    "test:e2e:ci": "start-server-and-test dev http://localhost:3000 cypress:run",
+    "test:e2e": "start-server-and-test dev http://www.alpozkan.info cypress:open",
+    "test:e2e:ci": "start-server-and-test dev http://www.alpozkan.info cypress:run",
     "validate": "npm-run-all --parallel lint typecheck check-format build"
   },
   "dependencies": {
@@ -21,7 +21,6 @@
     "clsx": "^1.2.1",
     "contentlayer": "^0.3.2",
     "date-fns": "^2.29.3",
-    "encoding": "^0.1.13",
     "graphql": "^16.6.0",
     "graphql-request": "^6.0.0",
     "next": "13.3.2",
