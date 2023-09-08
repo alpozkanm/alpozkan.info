@@ -1,0 +1,30 @@
+.container {
+  display: grid;
+  grid-template-columns: 2rem auto;
+  align-items: center;
+  grid-gap: 1rem;
+  max-width: 62.5em;
+  border-radius: 6px;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+}
+
+.container:hover {
+  background-color: #1f2937;
+}
+
+.track-title {
+  display: -webkit-box;
+  white-space: unset;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+@media screen and (min-width: 640px) {
+  .container {
+    grid-template-columns: 2rem 6fr 4fr 1fr;
+  }
+}
