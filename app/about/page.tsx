@@ -8,7 +8,7 @@ import styles from "~/styles/about.module.css";
 export const metadata = {
   title: "About me",
   description:
-    "Learn more about me, I'm an Istanbul based Product Executive with a passion for user experience and privacy.",
+    "Learn more about me, I'm an Istanbul based product executive with a passion for user experience and privacy.",
 };
 
 export default async function AboutPage() {
