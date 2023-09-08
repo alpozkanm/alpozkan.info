@@ -88,13 +88,14 @@ export default async function AboutPage() {
         <p>
           As a seasoned Product Manager with over 10 years of experience, I have
           consistently delivered groundbreaking products in diverse industries
-          such as E-commerce, FinTech, Delivery Service, Blockchain, and Mobile Apps.
+          such as E-commerce, FinTech, Delivery Service, Blockchain, and Mobile
+          Apps.
         </p>
         <p>
-        My proven track record includes successfully launching more than
-          75 products on an international scale. Adept at building robust
-          product organizations, I possess a keen understanding of every stage
-          of product development, from early ideation to launch.
+          My proven track record includes successfully launching more than 75
+          products on an international scale. Adept at building robust product
+          organizations, I possess a keen understanding of every stage of
+          product development, from early ideation to launch.
         </p>
       </section>
 
