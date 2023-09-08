@@ -8,7 +8,7 @@ import styles from "~/styles/about.module.css";
 export const metadata = {
   title: "About me",
   description:
-    "Learn more about me, I'm a Istanbul-based Product Executive with a passion for user experience and privacy.",
+    "Learn more about me, I'm an Istanbul based product executive with a passion for user experience and privacy.",
 };
 
 export default async function AboutPage() {
@@ -88,13 +88,14 @@ export default async function AboutPage() {
         <p>
           As a seasoned Product Manager with over 10 years of experience, I have
           consistently delivered groundbreaking products in diverse industries
-          such as E-commerce, FinTech, Delivery Service, Blockchain, and Mobile Apps.
+          such as E-commerce, FinTech, Delivery Service, Blockchain, and Mobile
+          Apps.
         </p>
         <p>
-        My proven track record includes successfully launching more than
-          75 products on an international scale. Adept at building robust
-          product organizations, I possess a keen understanding of every stage
-          of product development, from early ideation to launch.
+          My proven track record includes successfully launching more than 75
+          products on an international scale. Adept at building robust product
+          organizations, I possess a keen understanding of every stage of
+          product development, from early ideation to launch.
         </p>
       </section>
 
