@@ -10,7 +10,7 @@ export default function Posts({ posts }: { posts: Post[] }) {
             <Date dateString={post.date} />
           </div>
           <h3 className="mt-3 text-xl font-bold leading-6 text-gray-100">
-            <a href={`/blog/${post.slug}`}>{post.title}</a>
+            <a href={`https://medium.com/@alpozkanm/${post.slug}`}>{post.title}</a>
           </h3>
           <p className="mt-3">{post.description}</p>
         </article>

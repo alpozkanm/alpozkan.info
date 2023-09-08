@@ -69,12 +69,12 @@ export default async function BlogPost({
       </header>
       <section
         itemProp="articleBody"
-        className="prose mx-auto my-16 px-4 dark:prose-invert lg:prose-lg prose-a:text-sky-300 lg:my-32"
+        className="prose mx-auto my-8 px-4 dark:prose-invert lg:prose-lg prose-a:text-sky-300 lg:my-8"
       >
-        {/* className="mx-auto my-16 max-w-5xl px-4 lg:my-32" */}
+        {/* className="mx-auto my-8 max-w-5xl px-4 lg:my-8" */}
         <Mdx code={post.body.code} />
       </section>
-      <footer className="mx-auto my-16 max-w-7xl sm:my-24 lg:my-32">
+      <footer className="mx-auto my-8 max-w-7xl sm:my-12 lg:my-8">
         <NewsletterSignup />
       </footer>
     </article>

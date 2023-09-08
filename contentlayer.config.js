@@ -4,7 +4,7 @@ import rehypePrettyCode from "rehype-pretty-code";
 
 export const Post = defineDocumentType(() => ({
   name: "Post",
-  filePathPattern: `**/*.mdx`,
+  filePathPattern: `**/*.{md,mdx}`,
   contentType: "mdx",
   fields: {
     title: {
