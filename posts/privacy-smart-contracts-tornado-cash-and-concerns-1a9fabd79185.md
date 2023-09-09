@@ -1,12 +1,13 @@
 ---
-title: 'Privacy, Smart Contracts, Tornado Cash and Concerns'
+title: "Privacy, Smart Contracts, Tornado Cash and Concerns"
 description: >-
   First post, Yey! We were all worried, right? but not ourselves, for friends
   who used the privacy protocol..
-date: '2022-08-26T23:13:20.074Z'
+date: "2022-08-26T23:13:20.074Z"
 categories: []
 keywords: []
 slug: /@alpozkanm/privacy-smart-contracts-tornado-cash-and-concerns-1a9fabd79185
+image: "/img/1__wSX7mhEAVCe7HHqAbDlYIA.jpeg"
 ---
 
 Hey friends, first time posting here, and super excited…
@@ -29,10 +30,10 @@ More than 50 people gathered in Amsterdam’s Dam Square on Saturday to protest 
 
 So what is actually happening on the relevant part of the DeFi privacy protocol? It’s known as a privacy protocol that uses a cryptocurrency mixer that is most active on Ethereum blockchain and facilitates anonymous transactions by making it extremely difficult to trace crypto wallets involved with these transactions.
 
-*   Depositors connect their decentralized wallet to a specific chain they wish to use,
-*   choose the specific amount of ETH or other cryptocurrencies,
-*   make a deposit to the mixer,
-*   receive a note regarding the deposit.
+- Depositors connect their decentralized wallet to a specific chain they wish to use,
+- choose the specific amount of ETH or other cryptocurrencies,
+- make a deposit to the mixer,
+- receive a note regarding the deposit.
 
 It’s crucial to select a specific amount and wait for 2 days after the deposit to be unknown, this is recommended by the protocol and the people who use it. With this note, the other party who wishes to withdraw the money enters this note and crypto wallet address, and after that they receive the amount of cryptocurrency without being spotted(some can investigate further and link specific accounts and find the related parties if there are multiple transactions).
 
@@ -44,11 +45,11 @@ It’s a niche topic. Protocols can be used to launder money with unknown partie
 
 There have been several hacks with stolen money from DeFi protocols transferred using this protocol. It has been analyzed and presented that %28 of the transfers have been used by hackers and people with bad intentions.
 
-*   Tornado Cash on the day after the sanctions, processed over $2 million worth of cryptocurrency transactions.
-*   Circle, who is known for issuing USDC, frozen the accounts that are related with this privacy protocol.
-*   Github suspended the pages that are used for development purposes for the related protocol.
-*   Some DeFi apps started to block the accounts that have been used to make transactions using the privacy protocol.
-*   According to a member of the privacy protocol team, the decentralized voting system that has been used to vote on the topics related with the protocol and make decisions by governance known as DAO and decided to shut down by their own governance members.
+- Tornado Cash on the day after the sanctions, processed over $2 million worth of cryptocurrency transactions.
+- Circle, who is known for issuing USDC, frozen the accounts that are related with this privacy protocol.
+- Github suspended the pages that are used for development purposes for the related protocol.
+- Some DeFi apps started to block the accounts that have been used to make transactions using the privacy protocol.
+- According to a member of the privacy protocol team, the decentralized voting system that has been used to vote on the topics related with the protocol and make decisions by governance known as DAO and decided to shut down by their own governance members.
 
 **What about wallets added to the blacklist on dApps (Decentralized Finance Apps)?**
 

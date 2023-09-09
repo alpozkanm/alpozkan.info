@@ -22,6 +22,11 @@ export const Post = defineDocumentType(() => ({
       description: "The description of the post",
       required: true,
     },
+    image: {
+      type: "string",
+      description: "The image of the post",
+      required: true,
+    },
   },
   computedFields: {
     slug: {
