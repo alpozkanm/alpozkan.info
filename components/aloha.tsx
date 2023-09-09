@@ -17,7 +17,7 @@ export default function Aloha() {
         .
       </p>
       <Image
-        className="my-8 animate-tada rounded-xl sm:my-16 sm:rounded-2xl"
+        className="my-8 animate-tada rounded-xl sm:my-8 sm:rounded-2xl"
         src={image}
         alt="Alp Ozkan"
         width={300}

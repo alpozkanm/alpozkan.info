@@ -101,7 +101,7 @@ export default async function AboutPage() {
 
       <Photos />
 
-      <section className="my-16 px-4 lg:my-32">
+      <section className="my-8 px-4 lg:my-8">
         <h2 className="mb-8 text-2xl font-bold text-gray-100 md:text-3xl lg:text-4xl">
           Recently played
         </h2>

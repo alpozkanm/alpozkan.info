@@ -20,16 +20,16 @@ export default function Home() {
 
   return (
     <>
-      <section className="my-16 sm:my-24 lg:my-32">
+      <section className="my-8 sm:my-12 lg:my-8">
         <Aloha />
       </section>
-      <div className="my-32 sm:my-48 lg:my-64">
+      <div className="my-8 sm:my-48 lg:my-64">
         <div className="mx-auto max-w-7xl px-4">
           <h2 className="my-8 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl">
             Recent posts
           </h2>
           <Posts posts={posts} />
-          <p className="my-16 md:text-lg lg:text-xl">
+          <p className="my-8 md:text-lg lg:text-xl">
             <Link
               className="font-bold text-gray-100 hover:text-white"
               href="/blog"
@@ -40,7 +40,7 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="my-16 sm:my-24 lg:my-32" id="newsletter-signup">
+      <section className="my-8 sm:my-12 lg:my-8" id="newsletter-signup">
         <NewsletterSignup />
       </section>
     </>
