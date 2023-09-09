@@ -15,11 +15,13 @@ export default function Posts({ posts }: { posts: Post[] }) {
               {post.title}
             </a>
           </h3>
-          { post.image && (
-              <div style={{ width: '200px', position: 'relative', height: '100px' }}>
-                <Image fill={true} src={post.image} alt={post.title}/>
-              </div>  
-            )}
+          {post.image && (
+            <div
+              style={{ width: "200px", position: "relative", height: "100px" }}
+            >
+              <Image fill={true} src={post.image} alt={post.title} />
+            </div>
+          )}
           <p className="mt-3">{post.description}</p>
         </article>
       ))}
