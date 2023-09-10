@@ -16,7 +16,7 @@ export default function Header() {
       >
         Alp Ozkan
       </Link>
-      <nav className="text-lg tablet:ml-auto tablet:text-xl">
+      <nav className="w-full text-lg tablet:ml-auto tablet:text-xl sm:w-auto">
         <ul className="my-4 flex gap-2 tablet:m-0">
           {links.map((link) => (
             <li key={link.href}>

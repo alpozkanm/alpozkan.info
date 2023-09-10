@@ -1,6 +1,7 @@
 import { Inter, JetBrains_Mono } from "next/font/google";
 import Header from "~/components/header";
 import Footer from "~/components/footer";
+import GoogleAnalytics from "~/components/GoogleAnalytics";
 import "~/styles/globals.css";
 
 export const metadata = {
@@ -35,9 +36,9 @@ export default function RootLayout({
     >
       <head />
       <body className="font-body bg-gray-900 text-gray-400">
-        <a href="#main" className="sr-only focus:not-sr-only">
-          Skip to content
-        </a>
+        <GoogleAnalytics
+          GA_TRACKING_ID={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID as string}
+        />
         <Header />
         <main id="main">{children}</main>
         <Footer />
