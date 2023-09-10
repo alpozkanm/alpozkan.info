@@ -10,19 +10,21 @@ export default function Posts({ posts }: { posts: Post[] }) {
           <div className="text-sm text-gray-500">
             <Date dateString={post.date} />
           </div>
-          <h3 className="mt-3 text-xl font-bold leading-6 text-gray-100">
-            <a href={`https://medium.com/@alpozkanm/${post.slug}`}>
-              {post.title}
-            </a>
-          </h3>
-          {post.image && (
-            <div
-              style={{ width: "200px", position: "relative", height: "100px" }}
-            >
-              <Image fill={true} src={post.image} alt={post.title} />
+          <div className="flex gap-2">
+            <div className="flex-1 text-sm text-gray-500 md:order-1">
+              <h3 className="mt-3 text-xl font-bold leading-6 text-gray-100">
+                <a href={`https://medium.com/@alpozkanm/${post.slug}`}>
+                  {post.title}
+                </a>
+              </h3>
+              <p className="mt-3 hidden sm:block">{post.description}</p>
             </div>
-          )}
-          <p className="mt-3">{post.description}</p>
+            {post.image && (
+              <div className="relative order-1 h-[112px] w-[112px] md:order-2">
+                <Image fill={true} src={post.image} alt={post.title} />
+              </div>
+            )}
+          </div>
         </article>
       ))}
     </div>
