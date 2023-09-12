@@ -4,7 +4,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mx-auto my-8 max-w-7xl px-4 text-sm md:text-base lg:text-lg">
+    <footer className="mx-auto my-8 max-w-7xl text-sm md:text-base lg:text-lg">
       <Link href="/" className="hover:underline">
         Alp Ozkan
       </Link>{" "}

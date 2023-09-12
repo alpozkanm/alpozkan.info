@@ -4,11 +4,10 @@ import Image from "next/image";
 import Photos from "~/components/photos";
 import querystring from "query-string";
 import styles from "~/styles/about.module.css";
+import { Metadata } from "next";
 
-export const metadata = {
-  title: "About me",
-  description:
-    "Learn more about me, I'm an Istanbul based product executive with a passion for user experience and privacy.",
+export const metadata: Metadata = {
+  title: "About",
 };
 
 export default async function AboutPage() {
@@ -75,16 +74,20 @@ export default async function AboutPage() {
       duration,
     };
   });
+  const uniqueTracks = tracks.filter((track, index, self) => {
+    const ids = self.map((t) => t.id);
+    return index === ids.indexOf(track.id);
+  });
 
   return (
     <div className="mx-auto max-w-7xl">
       <header>
-        <h1 className="mb-8 max-w-5xl px-4 text-4xl font-bold text-gray-100 md:mb-10 md:mt-32 md:text-5xl lg:mb-12 lg:text-[3.5rem]">
+        <h1 className="mb-8 max-w-5xl text-4xl font-bold text-gray-100 md:mb-10 md:mt-32 md:text-5xl lg:mb-12 lg:text-[3.5rem]">
           About
         </h1>
       </header>
 
-      <section className="prose mb-16 max-w-5xl px-4 dark:prose-invert lg:prose-lg prose-a:text-sky-300 lg:mb-32">
+      <section className="prose mb-16 max-w-5xl dark:prose-invert lg:prose-lg prose-a:text-sky-300 lg:mb-32">
         <p>
           As a seasoned Product Manager with over 10 years of experience, I have
           consistently delivered groundbreaking products in diverse industries
@@ -101,7 +104,7 @@ export default async function AboutPage() {
 
       <Photos />
 
-      <section className="my-8 px-4 lg:my-8">
+      <section className="my-8 lg:my-8">
         <h2 className="mb-8 text-2xl font-bold text-gray-100 md:text-3xl lg:text-4xl">
           Recently played
         </h2>
@@ -109,7 +112,7 @@ export default async function AboutPage() {
         <p className="my-4 md:text-lg lg:text-xl">
           A live feed of my recently played tracks on Spotify.
         </p>
-        {tracks.map(
+        {uniqueTracks.map(
           (
             {
               artists,

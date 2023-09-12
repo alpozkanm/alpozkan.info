@@ -1,15 +1,9 @@
 import Link from "next/link";
 import { allPosts } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
-import Aloha from "~/components/aloha";
+import Hello from "~/components/hello";
 import Posts from "~/components/posts";
 import NewsletterSignup from "~/components/newsletter-signup";
-
-export const metadata = {
-  title: "Aloha",
-  description:
-    "I'm a Product Executive living in Istanbul. I'm passionate about user experience and privacy.",
-};
 
 export default function Home() {
   const posts = allPosts
@@ -20,29 +14,31 @@ export default function Home() {
 
   return (
     <>
-      <section className="my-8 sm:my-12 lg:my-8">
-        <Aloha />
-      </section>
-      <div className="my-8 sm:my-48 lg:my-64">
-        <div className="mx-auto max-w-7xl px-4">
-          <h2 className="my-8 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl">
-            Recent posts
-          </h2>
-          <Posts posts={posts} />
-          <p className="my-8 md:text-lg lg:text-xl">
-            <Link
-              className="font-bold text-gray-100 hover:text-white"
-              href="/blog"
-            >
-              See all posts <span aria-hidden="true">→</span>
-            </Link>
-          </p>
+      <>
+        <section className="my-32 sm:my-12 md:my-8 lg:my-16 2xs:my-4 xs:my-4">
+          <Hello />
+        </section>
+        <div className="my-4 sm:my-4 lg:my-8">
+          <div className="mx-auto max-w-7xl">
+            <h2 className="my-8 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl">
+              Recent posts
+            </h2>
+            <Posts posts={posts} />
+            <p className="my-8 md:text-lg lg:text-xl">
+              <Link
+                className="font-bold text-gray-100 hover:text-white"
+                href="/blog"
+              >
+                See all posts <span aria-hidden="true">→</span>
+              </Link>
+            </p>
+          </div>
         </div>
-      </div>
 
-      <section className="my-8 sm:my-12 lg:my-8" id="newsletter-signup">
-        <NewsletterSignup />
-      </section>
+        <section className="my-8 sm:my-12 lg:my-8" id="newsletter-signup">
+          <NewsletterSignup />
+        </section>
+      </>
     </>
   );
 }

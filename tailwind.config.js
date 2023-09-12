@@ -48,7 +48,8 @@ module.exports = {
         tighter: "1.1111111",
       },
       screens: {
-        tablet: "520px",
+        "2xs": { max: "375px" },
+        xs: { max: "639px" },
       },
       typography: ({ theme }) => ({
         DEFAULT: {
@@ -90,5 +91,9 @@ module.exports = {
       }),
     },
   },
-  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/forms"),
+    require("tailwindcss-debug-screens"),
+    require("@tailwindcss/typography"),
+  ],
 };

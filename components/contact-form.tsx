@@ -25,7 +25,7 @@ export default function ContactForm() {
         name="name"
         autoComplete="name"
         aria-label="Name"
-        className="mb-4 w-full min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-pink-300 sm:text-sm sm:leading-6"
+        className="mb-4 w-full min-w-0 flex-auto rounded-md border-0 bg-white/5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-pink-300 sm:text-sm sm:leading-6"
       />
       <ValidationError prefix="Name" field="name" errors={state.errors} />
       <label htmlFor="email" className="mb-1 block">

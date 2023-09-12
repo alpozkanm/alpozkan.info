@@ -9,15 +9,15 @@ export default function Header() {
   ];
 
   return (
-    <header className="mx-auto my-8 flex max-w-7xl flex-wrap px-4 tracking-tight">
+    <header className="mx-auto mb-8 mt-8 flex max-w-7xl flex-wrap tracking-tight">
       <Link
         href="/"
-        className="text-xl font-bold text-gray-100 hover:underline tablet:text-2xl"
+        className="text-xl font-bold text-gray-100 hover:underline sm:text-2xl"
       >
         Alp Ozkan
       </Link>
-      <nav className="w-full text-lg tablet:ml-auto tablet:text-xl sm:w-auto">
-        <ul className="my-4 flex gap-2 tablet:m-0">
+      <nav className="w-full text-lg sm:ml-auto sm:w-auto sm:text-xl">
+        <ul className="my-4 flex gap-2 sm:m-0">
           {links.map((link) => (
             <li key={link.href}>
               <Link href={link.href} className="hover:underline">

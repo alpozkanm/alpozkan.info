@@ -1,16 +1,16 @@
 import Image from "next/image";
 import clsx from "clsx";
 
-import image1 from "~/public/images/laptop.jpg";
-import image2 from "~/public/images/Alp-Ozkan-Profile-Photo.png";
-import image3 from "~/public/images/keyboard.jpg";
+import image2 from "~/public/images/Alp_Ozkan_About_2.jpeg";
+import image3 from "~/public/images/Alp-Ozkan-Profile-Photo.png";
+import image1 from "~/public/images/Alp_Ozkan_About_3.jpg";
 
 export default function Photos() {
   const rotations = ["rotate-2", "-rotate-2", "rotate-2"];
   const alt = [
-    "Alp with his laptop",
-    "Alp Ozkan",
-    "Keychron K6 Wireless Mechanical Keyboard",
+    "Alp Ozkan website photo - about page",
+    "Alp Ozkan website photo - about page",
+    "Alp Ozkan website photo - about page",
   ];
 
   return (
@@ -19,7 +19,7 @@ export default function Photos() {
         <div
           key={image.src}
           className={clsx(
-            "relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-800 sm:w-72 sm:rounded-2xl",
+            "relative flex aspect-[9/10] w-44 overflow-hidden rounded-xl bg-zinc-800 sm:w-72 sm:rounded-2xl",
             rotations[imageIndex % rotations.length]
           )}
         >

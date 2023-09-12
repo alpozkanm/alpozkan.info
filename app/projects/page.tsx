@@ -1,8 +1,8 @@
 import { GraphQLClient, gql } from "graphql-request";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Projects",
-  description: "My projects and open source contributions.",
 };
 
 export const revalidate = 60;
@@ -74,12 +74,12 @@ export default async function ProjectsPage() {
   return (
     <>
       <header>
-        <h1 className="mx-auto mb-8 max-w-7xl px-4 text-4xl font-bold text-gray-100 md:mb-10 md:mt-32 md:text-5xl lg:mb-12 lg:text-[3.5rem]">
+        <h1 className="mx-auto mb-8 max-w-7xl text-4xl font-bold text-gray-100 md:mb-10 md:mt-32 md:text-5xl lg:mb-12 lg:text-[3.5rem]">
           Projects
         </h1>
       </header>
 
-      <section className="mx-auto mb-16 max-w-7xl px-4">
+      <section className="mx-auto mb-16 max-w-7xl">
         <div className="grid auto-cols-max grid-cols-1 gap-4 md:grid-cols-2">
           {projects.map((project) => (
             <a

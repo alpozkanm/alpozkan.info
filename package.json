@@ -25,13 +25,15 @@
     "graphql-request": "^6.1.0",
     "next": "13.3.2",
     "next-contentlayer": "^0.3.4",
+    "next-seo": "^6.1.0",
     "query-string": "^8.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.11.0",
     "rehype-pretty-code": "^0.9.11",
     "sharp": "^0.32.5",
-    "shiki": "^0.14.4"
+    "shiki": "^0.14.4",
+    "tailwindcss-debug-screens": "^2.2.1"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.6",

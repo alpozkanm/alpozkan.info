@@ -3,8 +3,16 @@ import Header from "~/components/header";
 import Footer from "~/components/footer";
 import GoogleAnalytics from "~/components/GoogleAnalytics";
 import "~/styles/globals.css";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
+  title: {
+    template: "%s | Alp Ozkan",
+    default:
+      "Alp Ozkan - Product Manager, Software Engineer and Web3 Enthusiast", // a default is required when creating a template"
+  },
+  description:
+    "Website of Alp Ozkan: Product Manager living in Istanbul, passionate about UX, Software Development and Web3.",
   icons: {
     shortcut: "/favicon.ico",
   },
@@ -35,7 +43,7 @@ export default function RootLayout({
       style={{ colorScheme: "dark" }}
     >
       <head />
-      <body className="font-body bg-gray-900 text-gray-400">
+      <body className="font-body debug-screens bg-gray-900 px-8 text-gray-400 sm:px-8 md:px-8 lg:px-16 2xs:px-4 xs:px-4">
         <GoogleAnalytics
           GA_TRACKING_ID={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID as string}
         />
