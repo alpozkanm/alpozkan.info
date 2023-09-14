@@ -1,25 +1,22 @@
 /// <reference types="spotify-api" />
-import Link from "next/link";
 import Image from "next/image";
 import Photos from "~/components/photos";
-import querystring from "query-string";
 import styles from "~/styles/about.module.css";
-import { Metadata } from "next";
+import Cookies from "js-cookie";
 
-export const metadata: Metadata = {
-  title: "About",
-};
+const { SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, SPOTIFY_REFRESH_TOKEN } =
+  process.env;
 
 export default async function AboutPage() {
-  const client_id = process.env.SPOTIFY_CLIENT_ID;
-  const client_secret = process.env.SPOTIFY_CLIENT_SECRET;
-  const refresh_token = process.env.SPOTIFY_REFRESH_TOKEN;
+  const client_id = SPOTIFY_CLIENT_ID;
+  const client_secret = SPOTIFY_CLIENT_SECRET;
+  const refresh_token = SPOTIFY_REFRESH_TOKEN;
 
   const basic = Buffer.from(`${client_id}:${client_secret}`).toString("base64");
   const RECENTLY_PLAYED_ENDPOINT = `https://api.spotify.com/v1/me/player/recently-played?limit=10`;
   const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
 
-  async function getAccessToken() {
+  const getAccessToken = async () => {
     const response = await fetch(TOKEN_ENDPOINT, {
       method: "POST",
       headers: {
@@ -27,29 +24,34 @@ export default async function AboutPage() {
         "Content-Type": "application/x-www-form-urlencoded",
       },
       cache: "no-store",
-      body: querystring.stringify({
+      body: new URLSearchParams({
         grant_type: "refresh_token",
-        refresh_token,
+        refresh_token: refresh_token || "",
       }),
     });
+    const { access_token, expires_in } = await response.json();
+    Cookies.set("spotify-token", access_token as string, {
+      expires: expires_in as number,
+    });
 
-    return response.json();
-  }
+    return access_token as string;
+  };
 
   async function getRecentlyPlayed() {
-    const { access_token } = await getAccessToken();
+    const access_token =
+      Cookies.get("spotify-token") || (await getAccessToken());
 
-    return fetch(RECENTLY_PLAYED_ENDPOINT, {
+    const response = await fetch(RECENTLY_PLAYED_ENDPOINT, {
       headers: {
         Authorization: `Bearer ${access_token}`,
       },
       cache: "no-store",
     });
+    return await response.json();
   }
 
-  const response = await getRecentlyPlayed();
   const { items }: SpotifyApi.UsersRecentlyPlayedTracksResponse =
-    await response.json();
+    await getRecentlyPlayed();
 
   const tracks = items.map(({ track }) => {
     const minutes = Math.floor(track.duration_ms / 1000 / 60);
