@@ -1,7 +1,7 @@
 export default function NewsletterSignup() {
   const endpoint_token = process.env.NEXT_PUBLIC_BUTTONDOWN_ID;
   return (
-    <div className="flex-cols-1 lg:flex-cols-12 mx-auto flex max-w-7xl justify-between gap-10 lg:gap-8">
+    <div className="mx-auto mx-auto grid max-w-7xl grid-cols-1 justify-between gap-10 lg:grid-cols-12 lg:gap-8">
       <div className="max-w-xl text-3xl font-bold tracking-tight text-white sm:text-4xl lg:col-span-7">
         <h2 className="inline sm:block lg:inline xl:block">
           Want all the news and updates?
