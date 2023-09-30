@@ -1,7 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
 import styles from "~/styles/aloha.module.css";
-import image from "~/public/images/Alp-Ozkan-Profile-Photo.png";
 
 export default function Hello() {
   return (
@@ -44,7 +42,7 @@ export default function Hello() {
           href="/about"
           className="hover:bg-perple-500 rounded-md bg-purple-600 bg-gradient-to-r from-pink-800 to-purple-600 px-5 py-3.5 font-light text-white shadow-sm hover:from-pink-700 hover:to-purple-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-purple-300"
         >
-          About me <span aria-hidden="true">→</span>
+          About me
         </Link>
       </div>
     </div>

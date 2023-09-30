@@ -1,12 +1,15 @@
 import Link from "next/link";
-import { allPosts } from "contentlayer/generated";
+import { allContents } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
 import Hello from "~/components/hello";
 import Posts from "~/components/posts";
 import NewsletterSignup from "~/components/newsletter-signup";
 
 export default function Home() {
-  const posts = allPosts
+  const filteredProjects = allContents.filter((post) => {
+    return post.image.includes("1_");
+  });
+  const posts = filteredProjects
     .sort((a, b) => {
       return compareDesc(new Date(a.date), new Date(b.date));
     })
@@ -29,7 +32,7 @@ export default function Home() {
                 className="font-bold text-gray-100 hover:text-white"
                 href="/blog"
               >
-                See all posts <span aria-hidden="true">→</span>
+                See all posts
               </Link>
             </p>
           </div>

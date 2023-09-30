@@ -1,8 +1,8 @@
-import { Post } from "~/.contentlayer/generated";
+import { Content } from "~/.contentlayer/generated";
 import Date from "~/components/date";
 import Image from "next/image";
 
-export default function Posts({ posts }: { posts: Post[] }) {
+export default function Posts({ posts }: { posts: Content[] }) {
   return (
     <div className="mx-auto grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
       {posts.map((post) => (

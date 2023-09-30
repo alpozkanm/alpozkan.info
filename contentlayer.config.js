@@ -2,8 +2,8 @@ import { defineDocumentType, makeSource } from "contentlayer/source-files";
 import { codeHighlightOptions } from "./lib/codeHighlightOptions";
 import rehypePrettyCode from "rehype-pretty-code";
 
-export const Post = defineDocumentType(() => ({
-  name: "Post",
+export const Content = defineDocumentType(() => ({
+  name: "Content",
   filePathPattern: `**/*.{md,mdx}`,
   contentType: "mdx",
   fields: {
@@ -38,7 +38,7 @@ export const Post = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: "posts",
-  documentTypes: [Post],
+  documentTypes: [Content],
   mdx: {
     rehypePlugins: [[rehypePrettyCode, codeHighlightOptions]],
   },

@@ -1,4 +1,4 @@
-import { allPosts } from "contentlayer/generated";
+import { allContents } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
 import Posts from "~/components/posts";
 import { Metadata } from "next";
@@ -8,7 +8,10 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
-  const posts = allPosts.sort((a, b) => {
+  const filteredProjects = allContents.filter((post) => {
+    return post.image.includes("1_");
+  });
+  const posts = filteredProjects.sort((a, b) => {
     return compareDesc(new Date(a.date), new Date(b.date));
   });
 
