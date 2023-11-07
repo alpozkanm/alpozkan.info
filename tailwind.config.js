@@ -91,9 +91,5 @@ module.exports = {
       }),
     },
   },
-  plugins: [
-    require("@tailwindcss/forms"),
-    require("tailwindcss-debug-screens"),
-    require("@tailwindcss/typography"),
-  ],
+  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
 };

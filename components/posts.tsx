@@ -20,8 +20,8 @@ export default function Posts({ posts }: { posts: Content[] }) {
               <p className="mt-3 hidden sm:block">{post.description}</p>
             </div>
             {post.image && (
-              <div className="relative order-1 h-[112px] w-[112px] md:order-2">
-                <Image fill={true} src={post.image} alt={post.title} />
+              <div className="relative order-1 h-[112px] w-[112px] md:order-2 overflow-hidden">
+                <Image src={post.image} alt={post.title} sizes="112px" fill style={{ objectFit: 'contain', objectPosition: 'top',}} />
               </div>
             )}
           </div>

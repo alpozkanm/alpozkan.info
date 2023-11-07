@@ -19,7 +19,7 @@ export default function Projects({ projects }: { projects: Content[] }) {
             </div>
             {project.image && (
               <div className="relative order-1 h-[112px] w-[112px] md:order-2">
-                <Image fill={true} src={project.image} alt={project.title} />
+                <Image src={project.image} alt={project.title} sizes="112px" fill style={{ objectFit: 'contain', objectPosition: 'top',}}/>
               </div>
             )}
           </div>

@@ -2,6 +2,9 @@
 User-agent: *
 Allow: /
 
+User-agent: Googlebot-Image
+Disallow: /_next/image
+
 # Host
 Host: https://www.alpozkanm.info
 
