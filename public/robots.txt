@@ -5,8 +5,5 @@ Allow: /
 User-agent: Googlebot-Image
 Disallow: /_next/image
 
-# Host
-Host: https://www.alpozkanm.info
-
 # Sitemaps
-Sitemap: https://www.alpozkanm.info/sitemap_index.xml
+Sitemap: https://www.alpozkanm.info/sitemap_pages.xml
