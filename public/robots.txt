@@ -9,4 +9,4 @@ Disallow: /_next/image
 Host: https://www.alpozkanm.info
 
 # Sitemaps
-Sitemap: https://www.alpozkanm.info/sitemap.xml
+Sitemap: https://www.alpozkanm.info/sitemap_index.xml
